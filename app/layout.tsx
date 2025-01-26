@@ -7,8 +7,8 @@ import Footer from './components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'CleanURL',
-    description: 'Clean your URLs from tracking parameters',
+    title: 'CleanURL - Clean your URLs from tracking parameters',
+    description: 'Simplifying URLs for a cleaner web experience.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
