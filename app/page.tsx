@@ -58,16 +58,16 @@ export default function Page() {
                         className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white"
                         data-oid=":_22w.6"
                     >
-                        Clean
+                        CleanURL
                         <span className="text-blue-600 dark:text-blue-500" data-oid="kw2lb13">
-                            URL
+                            
                         </span>
                     </h1>
                     <p
                         className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
                         data-oid="6kdfek2"
                     >
-                        Remove tracking parameters and clean up your URLs instantly
+                        Simplifying URLs for a cleaner web experience
                     </p>
                 </div>
 
