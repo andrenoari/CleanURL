@@ -18,6 +18,7 @@ export default function Page() {
                 'utm_term',
                 'utm_content',
                 'fbclid',
+                'fbid',
                 'gclid',
                 '_ga',
                 'ref',
