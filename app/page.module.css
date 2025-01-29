@@ -19,35 +19,29 @@
   color: #666;
 }
 
-.inputContainer {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  align-items: center;
+.mainContent {
+  margin-bottom: 40px;
 }
 
-.urlInput {
-  width: 100%;
-  max-width: 600px;
+.features {
+  margin: 20px 0;
+}
+
+.featureList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.featureItem {
+  text-align: center;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 10px;
-  box-sizing: border-box;
+  border-radius: 8px;
+  transition: transform 0.2s;
 }
 
-.cleanButton {
-  padding: 10px 20px;
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.cleanButton:hover {
-  background-color: #005bb5;
+.featureItem:hover {
+  transform: scale(1.05);
 }
 
 .footer {
