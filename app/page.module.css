@@ -3,153 +3,241 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 0 24px;
   background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+:global(.dark) .container {
+  background-color: #111827;
 }
 
 .content {
   width: 100%;
   max-width: 1200px;
   text-align: center;
+  padding-top: 64px;
 }
 
 .title {
   font-size: 48px;
+  line-height: 1;
   font-weight: 700;
-  color: #1a1a1a;
-  margin: 0 0 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #111827;
+  margin: 0 0 12px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+:global(.dark) .title {
+  color: #ffffff;
 }
 
 .highlight {
-  color: #3b82f6;
+  color: #3B82F6;
+}
+
+:global(.dark) .highlight {
+  color: #818CF8;
 }
 
 .subtitle {
-  font-size: 18px;
-  color: #6b7280;
-  margin: 0 0 40px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6B7280;
+  margin: 0 0 32px;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+:global(.dark) .subtitle {
+  color: #9CA3AF;
 }
 
 .inputContainer {
-  max-width: 800px;
-  margin: 0 auto 60px;
+  max-width: 600px;
+  margin: 0 auto 48px;
   display: flex;
-  gap: 12px;
+  gap: 8px;
 }
 
 .input {
   flex: 1;
-  height: 44px;
+  height: 40px;
   padding: 0 16px;
-  font-size: 16px;
-  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  border: 1px solid #E5E7EB;
   border-radius: 6px;
   outline: none;
-  transition: border-color 0.2s;
+  transition: all 0.15s ease;
+  background-color: white;
+  color: #111827;
+}
+
+:global(.dark) .input {
+  background-color: #1F2937;
+  border-color: #374151;
+  color: white;
 }
 
 .input:focus {
-  border-color: #3b82f6;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.input::placeholder {
+  color: #9CA3AF;
+}
+
+:global(.dark) .input::placeholder {
+  color: #6B7280;
 }
 
 .cleanButton {
-  height: 44px;
-  padding: 0 24px;
-  font-size: 16px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
   font-weight: 500;
   color: white;
-  background-color: #3b82f6;
+  background-color: #3B82F6;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.15s ease;
+}
+
+:global(.dark) .cleanButton {
+  background-color: #6366F1;
 }
 
 .cleanButton:hover {
-  background-color: #2563eb;
+  background-color: #2563EB;
+}
+
+:global(.dark) .cleanButton:hover {
+  background-color: #4F46E5;
 }
 
 .whatWeRemove {
-  max-width: 800px;
-  margin: 0 auto 60px;
-  padding: 40px;
-  background-color: #f8fafc;
+  max-width: 600px;
+  margin: 0 auto 64px;
+  padding: 24px;
+  background-color: #F9FAFB;
   border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+:global(.dark) .whatWeRemove {
+  background-color: #1F2937;
 }
 
 .whatWeRemove h2 {
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 1.2;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #111827;
   margin: 0 0 24px;
   text-align: center;
+}
+
+:global(.dark) .whatWeRemove h2 {
+  color: white;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 12px;
 }
 
 .grid > div {
-  padding: 16px;
+  padding: 12px;
   background-color: white;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #E5E7EB;
   border-radius: 6px;
-  color: #4b5563;
-  font-size: 16px;
+  color: #6B7280;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: all 0.15s ease;
+}
+
+:global(.dark) .grid > div {
+  background-color: #374151;
+  border-color: #4B5563;
+  color: #D1D5DB;
 }
 
 .infoColumns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  max-width: 1000px;
+  gap: 48px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: left;
 }
 
 .whyClean h2,
 .howItWorks h2 {
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 1.2;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #111827;
   margin: 0 0 16px;
 }
 
+:global(.dark) .whyClean h2,
+:global(.dark) .howItWorks h2 {
+  color: white;
+}
+
 .whyClean p {
-  color: #6b7280;
-  margin: 0 0 16px;
+  color: #6B7280;
+  margin: 0 0 12px;
   line-height: 1.5;
+  font-size: 14px;
+}
+
+:global(.dark) .whyClean p {
+  color: #9CA3AF;
 }
 
 .whyClean ul {
   list-style: none;
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   padding: 0;
 }
 
 .whyClean ul li {
   position: relative;
-  padding-left: 24px;
-  margin-bottom: 12px;
-  color: #4b5563;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #6B7280;
   line-height: 1.5;
+  font-size: 14px;
+}
+
+:global(.dark) .whyClean ul li {
+  color: #9CA3AF;
 }
 
 .whyClean ul li::before {
   content: "•";
   position: absolute;
-  left: 8px;
-  color: #3b82f6;
+  left: 6px;
+  color: #3B82F6;
+}
+
+:global(.dark) .whyClean ul li::before {
+  color: #818CF8;
 }
 
 .note {
-  color: #6b7280;
+  color: #6B7280;
   line-height: 1.5;
   margin: 0;
+  font-size: 14px;
+}
+
+:global(.dark) .note {
+  color: #9CA3AF;
 }
 
 .steps {
@@ -167,34 +255,49 @@
 .stepNumber {
   width: 24px;
   height: 24px;
-  background-color: #3b82f6;
+  background-color: #3B82F6;
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 14px;
   flex-shrink: 0;
+}
+
+:global(.dark) .stepNumber {
+  background-color: #818CF8;
 }
 
 .step p {
   margin: 0;
-  color: #4b5563;
+  color: #6B7280;
   line-height: 1.5;
+  font-size: 14px;
+}
+
+:global(.dark) .step p {
+  color: #9CA3AF;
 }
 
 .result {
-  max-width: 800px;
-  margin: 40px auto 0;
+  max-width: 600px;
+  margin: 32px auto 0;
 }
 
 .cleanedUrl {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px;
-  background-color: #f8fafc;
-  border-radius: 8px;
+  gap: 12px;
+  padding: 12px;
+  background-color: #F9FAFB;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+:global(.dark) .cleanedUrl {
+  background-color: #1F2937;
 }
 
 .cleanedUrl p {
@@ -202,38 +305,65 @@
   margin: 0;
   text-align: left;
   word-break: break-all;
-  color: #4b5563;
+  color: #6B7280;
   line-height: 1.5;
+  font-size: 14px;
+}
+
+:global(.dark) .cleanedUrl p {
+  color: #D1D5DB;
 }
 
 .copyButton {
-  padding: 8px 16px;
+  padding: 6px 12px;
   font-size: 14px;
-  color: #3b82f6;
+  font-weight: 500;
+  color: #3B82F6;
   background-color: white;
-  border: 1px solid #3b82f6;
+  border: 1px solid #3B82F6;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.15s ease;
   white-space: nowrap;
 }
 
+:global(.dark) .copyButton {
+  color: #818CF8;
+  background-color: #374151;
+  border-color: #818CF8;
+}
+
 .copyButton:hover {
-  background-color: #3b82f6;
+  background-color: #3B82F6;
+  color: white;
+}
+
+:global(.dark) .copyButton:hover {
+  background-color: #818CF8;
   color: white;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
+    padding: 0 16px;
+  }
+
+  .content {
+    padding-top: 32px;
   }
 
   .title {
     font-size: 36px;
   }
 
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
   .inputContainer {
     flex-direction: column;
+    margin-bottom: 32px;
   }
 
   .grid {
@@ -242,13 +372,19 @@
 
   .infoColumns {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
+  }
+
+  .whatWeRemove {
+    padding: 20px;
+    margin-bottom: 48px;
   }
 
   .cleanedUrl {
     flex-direction: column;
     align-items: stretch;
     text-align: left;
+    gap: 8px;
   }
 
   .copyButton {
