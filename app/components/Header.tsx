@@ -34,26 +34,26 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed w-full bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
-            <div className="max-w-4xl mx-auto px-4">
-                <div className="flex justify-between items-center h-16">
-                    <Link href="/" className="flex items-center space-x-2">
-                        <span className="text-xl font-bold text-gray-900 dark:text-white">
-                            Clean
-                            <span className="text-blue-600 dark:text-blue-500">URL</span>
+        <header className="fixed w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 backdrop-blur-md z-50 border-b border-transparent dark:border-transparent shadow-lg">
+            <div className="max-w-6xl mx-auto px-6">
+                <div className="flex justify-between items-center h-20">
+                    <Link href="/" className="flex items-center space-x-3">
+                        <img src="/logo.png" alt="Logo" className="h-10 w-10" />
+                        <span className="text-2xl font-extrabold text-white dark:text-gray-200">
+                            Modern<span className="text-yellow-300">Site</span>
                         </span>
                     </Link>
-                    <nav className="flex items-center space-x-4">
+                    <nav className="flex items-center space-x-6">
                         <button
                             onClick={toggleTheme}
-                            className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+                            className="p-2 text-white dark:text-gray-300 hover:text-yellow-300 dark:hover:text-yellow-300 transition-colors"
                             title={
                                 theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'
                             }
                         >
                             {theme === 'light' ? (
                                 <svg
-                                    className="h-5 w-5"
+                                    className="h-6 w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -67,7 +67,7 @@ export default function Header() {
                                 </svg>
                             ) : (
                                 <svg
-                                    className="h-5 w-5"
+                                    className="h-6 w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -85,7 +85,7 @@ export default function Header() {
                             href="https://github.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+                            className="p-2 text-white dark:text-gray-300 hover:text-yellow-300 dark:hover:text-yellow-300 transition-colors"
                             title="View on GitHub"
                         >
                             <span className="sr-only">GitHub</span>
