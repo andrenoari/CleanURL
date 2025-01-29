@@ -49,85 +49,82 @@ const HomePage = () => {
   };
 
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <header className={styles.header}>
         <h1 className={styles.title}>
           Clean<span className={styles.highlight}>URL</span>
         </h1>
         <p className={styles.subtitle}>
           Remove tracking parameters and clean up your URLs instantly
         </p>
+      </header>
 
-        <div className={styles.inputContainer}>
-          <input
-            type="text"
-            value={inputUrl}
-            onChange={(e) => setInputUrl(e.target.value)}
-            placeholder="Paste your URL here..."
-            className={styles.input}
-          />
-          <button onClick={cleanUrl} className={styles.button}>
-            Clean
-          </button>
+      <div className={styles.inputWrapper}>
+        <input
+          type="text"
+          value={inputUrl}
+          onChange={(e) => setInputUrl(e.target.value)}
+          placeholder="Paste your URL here..."
+          className={styles.input}
+        />
+        <button onClick={cleanUrl} className={styles.cleanButton}>
+          Clean
+        </button>
+      </div>
+
+      <div className={styles.infoSection}>
+        <div className={styles.whatWeRemove}>
+          <h2>What We Remove</h2>
+          <div className={styles.parameterGrid}>
+            <div className={styles.parameter}>UTM Parameters</div>
+            <div className={styles.parameter}>Facebook Click ID</div>
+            <div className={styles.parameter}>Google Analytics</div>
+            <div className={styles.parameter}>Instagram Share ID</div>
+            <div className={styles.parameter}>Google Click ID</div>
+            <div className={styles.parameter}>Reference Tags</div>
+          </div>
         </div>
 
-        <div className={styles.featuresSection}>
-          <div className={styles.featuresContainer}>
-            <div className={styles.features}>
-              <h2>What We Remove</h2>
-              <div className={styles.featureGrid}>
-                <div className={styles.feature}>UTM Parameters</div>
-                <div className={styles.feature}>Facebook Click ID</div>
-                <div className={styles.feature}>Google Analytics</div>
-                <div className={styles.feature}>Instagram Share ID</div>
-                <div className={styles.feature}>Google Click ID</div>
-                <div className={styles.feature}>Reference Tags</div>
-              </div>
-            </div>
+        <div className={styles.infoColumns}>
+          <div className={styles.whyClean}>
+            <h2>Why Clean URLs?</h2>
+            <p>URLs often contain tracking parameters that:</p>
+            <ul>
+              <li>Make links unnecessarily long</li>
+              <li>Reveal your traffic source</li>
+              <li>Track your online behavior</li>
+              <li>Clutter your shared links</li>
+            </ul>
+            <p className={styles.description}>
+              Our URL cleaner helps protect your privacy and creates cleaner, more professional-looking links for sharing.
+            </p>
           </div>
 
           <div className={styles.howItWorks}>
-            <div>
-              <h2>Why Clean URLs?</h2>
-              <ul className={styles.reasonsList}>
-                <li>Make links unnecessarily long</li>
-                <li>Reveal your traffic source</li>
-                <li>Track your online behavior</li>
-                <li>Clutter your shared links</li>
-              </ul>
-              <p className={styles.note}>
-                Our URL cleaner helps protect your privacy and creates cleaner, more professional-looking links for sharing.
-              </p>
-            </div>
-
-            <div>
-              <h2>How It Works</h2>
-              <ol className={styles.stepsList}>
-                <li>Paste your URL into the input field above</li>
-                <li>Our system automatically identifies and removes tracking parameters</li>
-                <li>Copy your clean URL with one click and share it anywhere</li>
-              </ol>
-            </div>
+            <h2>How It Works</h2>
+            <ol>
+              <li>Paste your URL into the input field above</li>
+              <li>Our system automatically identifies and removes tracking parameters</li>
+              <li>Copy your clean URL with one click and share it anywhere</li>
+            </ol>
           </div>
         </div>
+      </div>
 
-        {cleanedUrl && (
-          <div className="relative">
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-              <p className="text-gray-800 dark:text-gray-200 break-all text-left">
-                {cleanedUrl}
-              </p>
-            </div>
-            <button
+      {cleanedUrl && (
+        <div className={styles.result}>
+          <div className={styles.cleanedUrl}>
+            <p>{cleanedUrl}</p>
+            <button 
               onClick={copyToClipboard}
-              className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+              className={styles.copyButton}
             >
               {copied ? 'Copied!' : 'Copy'}
             </button>
           </div>
-        )}
-      </div>
-    </main>
+        </div>
+      )}
+    </div>
   );
 };
 
