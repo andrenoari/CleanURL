@@ -49,18 +49,16 @@ const HomePage = () => {
   };
 
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.container}>
-        <header className={styles.header}>
-          <h1 className={styles.title}>
-            Clean<span className={styles.highlight}>URL</span>
-          </h1>
-          <p className={styles.subtitle}>
-            Remove tracking parameters and clean up your URLs instantly
-          </p>
-        </header>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>
+          Clean<span className={styles.highlight}>URL</span>
+        </h1>
+        <p className={styles.subtitle}>
+          Remove tracking parameters and clean up your URLs instantly
+        </p>
 
-        <div className={styles.inputWrapper}>
+        <div className={styles.inputContainer}>
           <input
             type="text"
             value={inputUrl}
@@ -73,41 +71,48 @@ const HomePage = () => {
           </button>
         </div>
 
-        <div className={styles.infoSection}>
-          <div className={styles.whatWeRemove}>
-            <h2>What We Remove</h2>
-            <div className={styles.parameterGrid}>
-              <div className={styles.parameter}>UTM Parameters</div>
-              <div className={styles.parameter}>Facebook Click ID</div>
-              <div className={styles.parameter}>Google Analytics</div>
-              <div className={styles.parameter}>Instagram Share ID</div>
-              <div className={styles.parameter}>Google Click ID</div>
-              <div className={styles.parameter}>Reference Tags</div>
-            </div>
+        <div className={styles.whatWeRemove}>
+          <h2>What We Remove</h2>
+          <div className={styles.grid}>
+            <div>UTM Parameters</div>
+            <div>Facebook Click ID</div>
+            <div>Google Click ID</div>
+            <div>Google Analytics</div>
+            <div>Instagram Share ID</div>
+            <div>Reference Tags</div>
+          </div>
+        </div>
+
+        <div className={styles.infoColumns}>
+          <div className={styles.whyClean}>
+            <h2>Why Clean URLs?</h2>
+            <p>URLs often contain tracking parameters that:</p>
+            <ul>
+              <li>Make links unnecessarily long</li>
+              <li>Reveal your traffic source</li>
+              <li>Track your online behavior</li>
+              <li>Clutter your shared links</li>
+            </ul>
+            <p className={styles.note}>
+              Our URL cleaner helps protect your privacy and creates cleaner, more professional-looking links for sharing.
+            </p>
           </div>
 
-          <div className={styles.infoColumns}>
-            <div className={styles.whyClean}>
-              <h2>Why Clean URLs?</h2>
-              <p>URLs often contain tracking parameters that:</p>
-              <ul>
-                <li>Make links unnecessarily long</li>
-                <li>Reveal your traffic source</li>
-                <li>Track your online behavior</li>
-                <li>Clutter your shared links</li>
-              </ul>
-              <p className={styles.description}>
-                Our URL cleaner helps protect your privacy and creates cleaner, more professional-looking links for sharing.
-              </p>
-            </div>
-
-            <div className={styles.howItWorks}>
-              <h2>How It Works</h2>
-              <ol>
-                <li>Paste your URL into the input field above</li>
-                <li>Our system automatically identifies and removes tracking parameters</li>
-                <li>Copy your clean URL with one click and share it anywhere</li>
-              </ol>
+          <div className={styles.howItWorks}>
+            <h2>How It Works</h2>
+            <div className={styles.steps}>
+              <div className={styles.step}>
+                <span className={styles.stepNumber}>1</span>
+                <p>Paste your URL into the input field above</p>
+              </div>
+              <div className={styles.step}>
+                <span className={styles.stepNumber}>2</span>
+                <p>Our system automatically identifies and removes tracking parameters</p>
+              </div>
+              <div className={styles.step}>
+                <span className={styles.stepNumber}>3</span>
+                <p>Copy your clean URL with one click and share it anywhere</p>
+              </div>
             </div>
           </div>
         </div>
